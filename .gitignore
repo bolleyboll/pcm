@@ -33,3 +33,7 @@ latex/
 .idea/
 build
 src/simdjson
+scripts/grafana/grafana_volume/
+scripts/grafana/influxdb_volume/
+scripts/grafana/provisioning/
+.vscode/

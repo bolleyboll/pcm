@@ -521,6 +521,7 @@ void print_output(PCM * m,
 
 void print_basic_metrics_csv_header(const PCM * m)
 {
+    cout << "PID,";
     cout << "EXEC,IPC,FREQ,";
     if (m->isActiveRelativeFrequencyAvailable())
         cout << "AFREQ,";
@@ -897,6 +898,15 @@ void print_csv_header(PCM * m,
 template <class State>
 void print_basic_metrics_csv(const PCM * m, const State & state1, const State & state2, const bool print_last_semicolon = true)
 {
+    static int ctr_bolley = -1;
+
+    if (ctr_bolley == -1){
+
+    } else {
+
+    }
+    
+    cout << "2000,";
     cout << getExecUsage(state1, state2) <<
         ',' << getIPC(state1, state2) <<
         ',' << getRelativeFrequency(state1, state2);

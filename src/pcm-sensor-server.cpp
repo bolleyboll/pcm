@@ -627,6 +627,7 @@ private:
     void printBasicCounterState( BasicCounterState const& before, BasicCounterState const& after ) {
         addToHierarchy( "source=\"core\"" );
         printCounter( "Instructions Retired Any", getInstructionsRetired( before, after ) );
+        printCounter( "PID - Aman", getInstructionsRetired( before, after ) );
         printCounter( "Clock Unhalted Thread",    getCycles             ( before, after ) );
         printCounter( "Clock Unhalted Ref",       getRefCycles          ( before, after ) );
         printCounter( "L3 Cache Misses",          getL3CacheMisses      ( before, after ) );
